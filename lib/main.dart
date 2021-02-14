@@ -13,6 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        iconTheme: Theme.of(context).iconTheme.copyWith(
+              color: AppColors.text,
+            ),
         backgroundColor: AppColors.background,
         scaffoldBackgroundColor: AppColors.background,
         textTheme: Theme.of(context).textTheme.apply(
@@ -21,6 +24,7 @@ class MyApp extends StatelessWidget {
             ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
+            primary: AppColors.primary,
             elevation: 0,
             shape: const StadiumBorder(),
             textStyle: const TextStyle(color: AppColors.text),
