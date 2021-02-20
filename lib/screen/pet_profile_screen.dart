@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:speed_code_pet_app/constant/app_colors.dart';
 import 'package:speed_code_pet_app/widget/app_bottom_navigation_bar.dart';
+import 'package:speed_code_pet_app/widget/pet_card.dart';
 import 'package:speed_code_pet_app/widget/tab_bar_item.dart';
 
 class PetProfileScreen extends StatefulWidget {
@@ -75,10 +76,89 @@ class _PetProfileScreenState extends State<PetProfileScreen>
             child: SingleChildScrollView(
               child: Padding(
                 padding: EdgeInsets.only(
-                  left: 32,
-                  right: 32,
+                  top: 32,
+                  bottom: 32,
+                  left: 16,
+                  right: 16,
                 ),
-                child: Container(),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: PetCard(
+                            icon: Image.asset(
+                                'assets/image/pet_vaccinations.png'),
+                            iconBackgroundColor: AppColors.amber,
+                            title: 'Pet\nVaccinations',
+                            subTitle: 'Detailed Reports',
+                            percentage: 35,
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: PetCard(
+                            icon: Image.asset('assets/image/pet_surgeries.png'),
+                            iconBackgroundColor: AppColors.pink,
+                            title: 'Pet\nSurgeries',
+                            subTitle: 'Detailed Reports',
+                            percentage: 64,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: PetCard(
+                            icon: Image.asset('assets/image/pet_treats.png'),
+                            iconBackgroundColor: AppColors.orange,
+                            title: 'Pet\nTreats',
+                            subTitle: 'Detailed Reports',
+                            percentage: 72,
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: PetCard(
+                            icon: Image.asset('assets/image/pet_food.png'),
+                            iconBackgroundColor: AppColors.blue,
+                            title: 'Pet\nFood',
+                            subTitle: 'Detailed Reports',
+                            percentage: 45,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: PetCard(
+                            icon:
+                                Image.asset('assets/image/pet_accessories.png'),
+                            iconBackgroundColor: AppColors.blue,
+                            title: 'Pet\nAccessories',
+                            subTitle: 'Detailed Reports',
+                            percentage: 87,
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: PetCard(
+                            icon:
+                                Image.asset('assets/image/pet_merchandise.png'),
+                            iconBackgroundColor: AppColors.amber,
+                            title: 'Pet\nMerchandise',
+                            subTitle: 'Detailed Reports',
+                            percentage: 39,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
