@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speed_code_pet_app/constant/app_colors.dart';
+import 'package:speed_code_pet_app/screen/pet_profile_screen.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
@@ -58,7 +59,15 @@ class SignUpScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 48),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => PetProfileScreen(),
+                      ),
+                      (_) => false,
+                    );
+                  },
                   child: Text(
                     'CREATE ACCOUNT',
                     style: Theme.of(context).textTheme.button.copyWith(
