@@ -96,12 +96,20 @@ class SignUpScreen extends StatelessWidget {
   }) {
     return Builder(
       builder: (context) => TextField(
-        cursorColor: AppColors.primary,
+        cursorColor: AppColors.blue,
         decoration: InputDecoration(
           filled: true,
           fillColor: AppColors.sheet,
-          border: new OutlineInputBorder(
-            borderRadius: const BorderRadius.all(
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(12),
+            ),
+          ),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColors.blue,
+            ),
+            borderRadius: BorderRadius.all(
               const Radius.circular(12),
             ),
           ),
