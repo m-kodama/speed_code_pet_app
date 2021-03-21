@@ -2,7 +2,7 @@
 
 UI構築練習用のプロジェクト。
 
-https://github.com/m-kodama/speed_code_pet_app.git
+https://www.uplabs.com/posts/pet-profile-app-ui-design
 素材、デザインはこちらから拝借。
 
-![](screen_shot.png)
+<img src="screen_shot.png" width="800" />
